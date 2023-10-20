@@ -25,10 +25,10 @@ Flags:
 
 ## Top Messages
 
-list the top messages found in the logs (default 10)
+list the top messages found in the logs (default 15)
 
 Usage:
   `mmlogctl top-messages [input file] [flags]`
 
 Flags:
-  -n, --number int   number to display (default 10)
+  -n, --number int   number to display (default 15)

@@ -17,7 +17,7 @@ import (
 // topMessagesCmd represents the topMessages command
 var topMessagesCmd = &cobra.Command{
 	Use:   "top-messages [input file]",
-	Short: "list the top messages found in the logs (default 10)",
+	Short: "list the top messages found in the logs (default 15)",
 	Run: func(cmd *cobra.Command, args []string) {
 		// read the input file
 		inputFile := args[0]
@@ -98,6 +98,6 @@ var topMessagesCmd = &cobra.Command{
 func init() {
 	rootCmd.AddCommand(topMessagesCmd)
 
-	topMessagesCmd.Flags().IntP("number", "n", 10, "number to display")
+	topMessagesCmd.Flags().IntP("number", "n", 15, "number to display")
 	viper.BindPFlag("number", topMessagesCmd.Flags().Lookup("number"))
 }
